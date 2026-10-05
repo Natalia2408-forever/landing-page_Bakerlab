@@ -1,0 +1,24 @@
+{
+  "name": "landing-page_bakerlab",
+  "version": "1.0.0",
+  "description": "Landing page inspired by Bakerlab",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --dist-dir dist --public-url ./",
+    "deploy": "npm run build && gh-pages -d dist",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@parcel/transformer-sass": "^2.16.4",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.13.0",
+    "parcel": "^2.16.4",
+    "prettier": "^3.9.9"
+  }
+}

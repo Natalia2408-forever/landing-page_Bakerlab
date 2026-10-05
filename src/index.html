@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en" class="page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="./styles/main.scss" />
+    <link rel="icon" type="image/webp" href="./images/icon-cookie.webp" />
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <div class="top-bar">
+        <a
+          href="#"
+          class="top-bar__logo"
+          aria-label="Bakerlab, go to home page"
+        >
+          <img src="./images/bakerlab.webp" alt="" class="top-bar__logo-img" />
+        </a>
+        <nav class="top-bar__nav nav" aria-label="Main navigation">
+          <ul class="nav__list top-bar__list">
+            <li class="nav__item">
+              <a href="#products" class="nav__link top-bar__link"> Products </a>
+            </li>
+            <li class="nav__item">
+              <a href="#about-us" class="nav__link top-bar__link"> About Us </a>
+            </li>
+            <li class="nav__item">
+              <a href="#products" class="nav__link top-bar__link"> Blog </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#contact-us"
+                class="nav__link top-bar__link nav__link--contact-us"
+              >
+                <img src="./images/icon_phone.webp" alt="" class="nav__img" />
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#menu" class="top-bar__menu" aria-label="Open menu">
+          <img src="./images/icon_menu.webp" alt="" class="top-bar__menu-img" />
+        </a>
+      </div>
+      <div class="container">
+        <div class="header__main">
+          <p class="header__description">
+            We bake your fantasies — croissants, cakes, cookies, and cupcakes.
+          </p>
+          <h1 class="header__title">Creative bakery</h1>
+          <img src="./images/cookie.webp" alt="" class="header__img" />
+          <a href="#about-us" class="header__link"> Learn more </a>
+        </div>
+      </div>
+    </header>
+    <aside class="page__menu menu" id="menu" aria-label="Mobile menu">
+      <div class="top-bar menu__top-bar">
+        <a
+          href="./index.html"
+          class="top-bar__logo"
+          aria-label="Bakerlab, go to home page"
+        >
+          <img src="./images/bakerlab.webp" alt="" class="top-bar__logo-img" />
+        </a>
+        <a href="#" class="top-bar__close" aria-label="Close menu">
+          <img
+            src="./images/icon_close.webp"
+            alt=""
+            class="top-bar__close-img"
+          />
+        </a>
+      </div>
+      <nav class="menu__nav nav" aria-label="Mobile navigation">
+        <ul class="nav__list menu__list">
+          <li class="nav__item">
+            <a href="#products" class="nav__link menu__link"> Products </a>
+          </li>
+          <li class="nav__item">
+            <a href="#about-us" class="nav__link menu__link"> About Us </a>
+          </li>
+          <li class="nav__item">
+            <a href="#products" class="nav__link menu__link"> Blog </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#contact-us"
+              class="nav__link menu__link nav__link--contact-us"
+            >
+              <img src="./images/icon_phone.webp" alt="" class="nav__img" />
+              Contact us
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="page__main">
+      <section class="catalog" id="products" aria-labelledby="catalog-title">
+        <div class="container">
+          <h2 class="catalog__title" id="catalog-title">What we bake</h2>
+          <p class="catalog__description">
+            We can customize our cookies right for your needs. Just imagine it
+          </p>
+          <div class="catalog__content">
+            <div class="catalog__row">
+              <div
+                class="catalog__item product product--left product--left-left"
+              >
+                <img
+                  src="./images/what_we_bake_left_photo_first_order.webp"
+                  alt="Two loaf cakes with white lemon glaze and lemon slices"
+                  class="product__img"
+                />
+                <h3 class="product__title">Cakes</h3>
+                <p class="product__description">
+                  Oatmeal cookies with golden raisins, orange zest and chocolate
+                  chips
+                </p>
+                <a
+                  href="#contact-us"
+                  class="product__order"
+                  aria-label="Order cakes: oatmeal cookies with golden raisins, orange zest and chocolate chips"
+                >
+                  <img
+                    src="./images/icon_arrow.webp"
+                    alt=""
+                    class="product__order-img"
+                  />
+                  Order
+                </a>
+              </div>
+              <div
+                class="catalog__item product product--right product--left-right"
+              >
+                <img
+                  src="./images/what_we_bake_right_photo_first_order.webp"
+                  alt="Chocolate almond cake in a tray with chocolate pieces"
+                  class="product__img"
+                />
+                <h3 class="product__title">Cakes</h3>
+                <p class="product__description">
+                  Chocolate biscuit coffee cake topped with a buttercream and
+                  powder
+                </p>
+                <a
+                  href="#contact-us"
+                  class="product__order"
+                  aria-label="Order cakes: chocolate biscuit coffee cake with buttercream and powder"
+                >
+                  <img
+                    src="./images/icon_arrow.webp"
+                    alt=""
+                    class="product__order-img"
+                  />
+                  Order
+                </a>
+              </div>
+            </div>
+            <div class="catalog__row">
+              <div
+                class="catalog__item product product--left product--right-left"
+              >
+                <img
+                  src="./images/what-we_bake_left_photo_second_order.webp"
+                  alt="Glazed donuts in a bowl with a whisk beside it"
+                  class="product__img"
+                />
+                <h3 class="product__title">Donuts</h3>
+                <p class="product__description">
+                  Light multi-layered croissant strewn with cinammon and almond
+                  “petals”
+                </p>
+                <a
+                  href="#contact-us"
+                  class="product__order"
+                  aria-label="Order donuts: multi-layered croissant with cinnamon and almond petals"
+                >
+                  <img
+                    src="./images/icon_arrow.webp"
+                    alt=""
+                    class="product__order-img"
+                  />
+                  Order
+                </a>
+              </div>
+              <div
+                class="catalog__item product product--right product--right-right"
+              >
+                <img
+                  src="./images/what_we_bake_right_photo_second_order.webp"
+                  alt="Donut with coconut flakes and nuts on a white plate"
+                  class="product__img"
+                />
+                <h3 class="product__title">Donuts</h3>
+                <p class="product__description">
+                  Light multi-layered croissant strewn with coconut and nuts
+                </p>
+                <a
+                  href="#contact-us"
+                  class="product__order"
+                  aria-label="Order donuts: multi-layered croissant with coconut and nuts"
+                >
+                  <img
+                    src="./images/icon_arrow.webp"
+                    alt=""
+                    class="product__order-img"
+                  />
+                  Order
+                </a>
+              </div>
+            </div>
+            <div class="catalog__row">
+              <div
+                class="catalog__item product product--left product--left-left"
+              >
+                <img
+                  src="./images/what_we_bake_left_photo_third_order.webp"
+                  alt="Crumb cake on a pink background"
+                  class="product__img"
+                />
+                <h3 class="product__title">Cakes</h3>
+                <p class="product__description">
+                  <span class="product__description-short">
+                    Chocolate salted caramel, Vanilla frutti pebbles
+                  </span>
+                  <span class="product__description-long">
+                    Cake with chocolate salted caramel, Vanilla frutti pebbles
+                    inside
+                  </span>
+                </p>
+                <a
+                  href="#contact-us"
+                  class="product__order"
+                  aria-label="Order cakes: chocolate salted caramel with vanilla frutti pebbles"
+                >
+                  <img
+                    src="./images/icon_arrow.webp"
+                    alt=""
+                    class="product__order-img"
+                  />
+                  Order
+                </a>
+              </div>
+              <div
+                class="catalog__item product product--right product--left-right"
+              >
+                <img
+                  src="./images/what_we_bake_right_photo_third_order.webp"
+                  alt="Chocolate chip cookies on a pink background"
+                  class="product__img"
+                />
+                <h3 class="product__title">Cookies</h3>
+                <p class="product__description">
+                  Oatmeal cookies with golden raisins, orange zest and chocolate
+                  chips
+                </p>
+                <a
+                  href="#contact-us"
+                  class="product__order"
+                  aria-label="Order cookies: oatmeal cookies with golden raisins, orange zest and chocolate chips"
+                >
+                  <img
+                    src="./images/icon_arrow.webp"
+                    alt=""
+                    class="product__order-img"
+                  />
+                  Order
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-us" id="about-us">
+        <div class="container">
+          <div class="about-us__content">
+            <h2 class="about-us__title">
+              Few words
+              <br />
+              About us
+            </h2>
+            <p class="about-us__description">
+              Like many design teams, Onfido made the transition from Abstract +
+              Sketch, to Figma in the last couple of years. One of the common
+              resistance points internally before making that switch, was
+              Figma’s lack of Git-style branching that Abstract enabled. The
+              design team had come to rely on branching and had built a lot of
+              our processes around it.
+            </p>
+            <div class="about-us__stat stat stat--left stat--1">
+              <p class="stat__value">2015</p>
+              <p class="stat__label">Foundation year</p>
+            </div>
+            <div class="about-us__stat stat stat--right stat--2">
+              <p class="stat__value">23</p>
+              <p class="stat__label">Stores</p>
+            </div>
+            <div class="about-us__stat stat stat--left stat--3">
+              <p class="stat__value">155</p>
+              <p class="stat__label">Companies</p>
+            </div>
+            <div class="about-us__stat stat stat--right stat--4">
+              <p class="stat__value">10k+</p>
+              <p class="stat__label">Clients</p>
+            </div>
+          </div>
+        </div>
+        <img class="about-us__crumbs" src="./images/crumbs.webp" alt="" />
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <a
+            href="index.html"
+            class="footer__logo"
+            aria-label="Bakerlab, go to home page"
+          >
+            <img src="./images/bakerlab.webp" alt="" class="footer__logo-img" />
+          </a>
+          <nav
+            class="footer__nav nav footer__menu"
+            aria-label="Footer navigation"
+          >
+            <ul class="nav__list footer__list">
+              <li class="nav__item">
+                <h3 class="nav__title footer__title">Menu</h3>
+              </li>
+              <li class="nav__item">
+                <a href="#products" class="nav__link footer__link">
+                  Products
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#about-us" class="nav__link footer__link">
+                  About Us
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#products" class="nav__link footer__link"> Blog </a>
+              </li>
+              <li class="nav__item">
+                <a href="#products" class="nav__link footer__link">
+                  Terms & Privacy
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <h2 class="footer__section-title" id="contact-us">Contact us</h2>
+          <div class="nav footer__nav footer__call-us">
+            <ul class="nav__list footer__list">
+              <li class="nav__item">
+                <h3 class="nav__title footer__title">Call us</h3>
+              </li>
+              <li class="nav__item">
+                <a href="tel:+16295550129" class="nav__link footer__link">
+                  (629) 555-0129
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="tel:+16035550123" class="nav__link footer__link">
+                  (603) 555-0123
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="tel:+17045550127" class="nav__link footer__link">
+                  (704) 555-0127
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav footer__nav footer__email">
+            <ul class="nav__list footer__list">
+              <li class="nav__item">
+                <h3 class="nav__title footer__title">Email us</h3>
+              </li>
+              <li class="nav__item">
+                <a
+                  href="mailto:bakerlab@example.com"
+                  class="nav__link footer__link"
+                >
+                  bakerlab@example.com
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__socials">
+            <a
+              href="https://facebook.com"
+              class="footer__social"
+              aria-label="Facebook (opens in a new tab)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./images/icon_facebook.webp"
+                alt=""
+                class="footer__social-img"
+              />
+            </a>
+            <a
+              href="https://instagram.com"
+              class="footer__social"
+              aria-label="Instagram (opens in a new tab)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./images/icon_instagram.webp"
+                alt=""
+                class="footer__social-img"
+              />
+            </a>
+            <a
+              href="https://twitter.com"
+              class="footer__social"
+              aria-label="Twitter (opens in a new tab)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./images/icon_twitter.webp"
+                alt=""
+                class="footer__social-img"
+              />
+            </a>
+          </div>
+          <p class="footer__copyright">© Bakerlab 2022</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

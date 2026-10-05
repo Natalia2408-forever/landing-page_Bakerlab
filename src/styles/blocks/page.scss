@@ -1,0 +1,46 @@
+@use "../utils" as *;
+.page {
+  scroll-behavior: smooth;
+
+  &__body {
+    margin: 0;
+    background-color: $main-bg-color;
+    font-family: Inter, sans-serif;
+  }
+
+  &__menu {
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: $main-bg-color;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateX(100%);
+    pointer-events: none;
+
+    &:target {
+      z-index: 2;
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: all;
+    }
+  }
+
+  &:has(.page__menu:target) {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: $main-color;
+}
+
+p {
+  color: $secondary-color;
+}

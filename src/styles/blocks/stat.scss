@@ -1,0 +1,77 @@
+@use "../utils" as *;
+
+.stat {
+  grid-column: 1 / -1;
+
+  &:not(:nth-of-type(4)) {
+    margin-bottom: 48px;
+
+    @include on-tablet {
+      margin: 0;
+    }
+  }
+
+  &:nth-of-type(-n + 2) {
+    @include on-tablet {
+      margin-bottom: 80px;
+    }
+
+    @include on-desktop {
+      margin: 0;
+    }
+  }
+
+  &--left {
+    @include on-tablet {
+      grid-column: 1 / 5;
+    }
+  }
+
+  &--right {
+    @include on-tablet {
+      grid-column: 5 / -1;
+    }
+  }
+
+  &--1 {
+    @include on-desktop {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &--2 {
+    @include on-desktop {
+      grid-column: 3 / 5;
+    }
+  }
+
+  &--3 {
+    @include on-desktop {
+      grid-column: 5 / 7;
+    }
+  }
+
+  &--4 {
+    @include on-desktop {
+      grid-column: 7 / -1;
+    }
+  }
+
+  &__value {
+    color: $main-color;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 81.6px;
+    letter-spacing: -0.05em;
+  }
+
+  &__label {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+  }
+}

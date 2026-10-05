@@ -1,0 +1,26 @@
+@use "../utils" as *;
+.nav {
+  &__list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &--contact-us {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      color: $main-color;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+
+      height: 16px;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@use "../utils" as *;
+
+.about-us {
+  position: relative;
+  margin-block: 72px;
+
+  @include on-tablet {
+    margin-block: 152px;
+  }
+
+  @include on-desktop {
+    margin-block: 178px 56px;
+    padding-bottom: 293px;
+  }
+
+  &__content {
+    @include page-grid;
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    grid-column: 1 / -1;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 40.8px;
+    letter-spacing: -0.05em;
+
+    @include on-tablet {
+      grid-column: 1 / 5;
+      font-size: 56px;
+      line-height: 47.6px;
+    }
+
+    @include on-desktop {
+      font-size: 72px;
+      line-height: 61.2px;
+    }
+  }
+
+  &__description {
+    margin: 32px 0 64px;
+    grid-column: 1 / -1;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+
+    @include on-tablet {
+      grid-column: 5 / -1;
+      margin: 0 0 72px;
+    }
+
+    @include on-desktop {
+      margin-bottom: 144px;
+    }
+  }
+
+  &__crumbs {
+    position: absolute;
+    margin: 0 50%;
+    transform: translateX(-50%);
+    bottom: 174px;
+    width: 320px;
+    height: 300px;
+    z-index: -1;
+
+    @include on-tablet {
+      bottom: 52px;
+      width: 526px;
+      height: 493px;
+    }
+
+    @include on-desktop {
+      bottom: 0;
+      width: 718px;
+      height: 673px;
+    }
+  }
+}

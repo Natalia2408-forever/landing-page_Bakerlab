@@ -1,0 +1,95 @@
+@use "../utils" as *;
+.product {
+  grid-column: 1 / -1;
+
+  @include hover(transform, scale(1.05));
+
+  &--left {
+    @include on-tablet {
+      grid-column: 1 / 5;
+    }
+  }
+
+  &--right {
+    @include on-tablet {
+      grid-column: 5 / -1;
+    }
+  }
+
+  &--left-left {
+    @include on-desktop {
+      grid-column: 1 / 4;
+    }
+  }
+
+  &--left-right {
+    @include on-desktop {
+      grid-column: 4 / 7;
+    }
+  }
+
+  &--right-left {
+    @include on-desktop {
+      grid-column: 3 / 6;
+    }
+  }
+
+  &--right-right {
+    @include on-desktop {
+      grid-column: 6 / -1;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin: 16px 0 8px;
+    color: $footer-title-color;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    height: 72px;
+  }
+
+  &__description-long {
+    display: none;
+
+    @include on-desktop {
+      display: inline;
+    }
+  }
+
+  &__description-short {
+    @include on-desktop {
+      display: none;
+    }
+  }
+
+  &__order {
+    text-transform: uppercase;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    color: $main-color;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+
+    @include hover(transform, scale(1.05));
+  }
+}

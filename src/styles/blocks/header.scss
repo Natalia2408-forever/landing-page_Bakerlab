@@ -1,0 +1,168 @@
+@use "../utils" as *;
+.header {
+  &__main {
+    position: relative;
+    @include page-grid;
+  }
+
+  &__description {
+    grid-column: 1 / -1;
+    margin: 32px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+    @include on-tablet {
+      width: 280px;
+      margin: 80px 0 144px;
+      text-align: left;
+    }
+
+    @include on-desktop {
+      width: auto;
+      grid-column: 1 / 3;
+      margin: 135px 0 8px;
+    }
+
+    @include on-desktopLarge {
+      margin: 144px 0 40px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    grid-column: 1 / -1;
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 54.4px;
+    letter-spacing: -0.05em;
+    text-align: center;
+
+    @include on-tablet {
+      z-index: 2;
+      font-size: 80px;
+      line-height: 68px;
+    }
+
+    @include on-desktop {
+      font-size: 128px;
+      line-height: 0.85;
+    }
+
+    @include on-desktopLarge {
+      font-size: 144px;
+      line-height: 122.4px;
+    }
+  }
+
+  &__img {
+    grid-column: 1 / -1;
+    width: 100%;
+
+    @include on-tablet {
+      position: absolute;
+      top: 144px;
+      margin: 0 50%;
+      transform: translateX(-50%);
+      width: 326px;
+      height: 328px;
+    }
+
+    @include on-desktop {
+      top: 0;
+      width: 544px;
+      height: 546px;
+    }
+
+    @include on-desktopLarge {
+      width: 584px;
+      height: 586px;
+    }
+  }
+
+  &__link {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 4px;
+    box-sizing: border-box;
+    height: 56px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $main-color;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    border: 2px solid $main-color;
+    border-radius: 32px;
+    margin-bottom: 40px;
+    transition:
+      background-color 0.3s,
+      color 0.3s,
+      border-color 0.3s;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url(../images/icon-cookie.webp);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: $main-color;
+
+      &::before {
+        background-image: url(../images/icon_cookie_white.webp);
+      }
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      color: #fff;
+      background-color: $main-color-dark;
+      border-color: $main-color-dark;
+
+      &::before {
+        background-image: url(../images/icon_cookie_white.webp);
+      }
+    }
+
+    &--disabled {
+      color: $main-color-light;
+      border-color: $main-color-light;
+      background-color: transparent;
+      pointer-events: none;
+
+      &::before {
+        background-image: url(../images/icon_cookie_disabled.webp);
+      }
+    }
+
+    @include on-tablet {
+      grid-column: 3 / 7;
+      margin-block: 210px 228px;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / 3;
+      grid-row: 4 / 5;
+      margin-block: 64px 161px;
+    }
+
+    @include on-desktopLarge {
+      margin-bottom: 138px;
+    }
+  }
+}
